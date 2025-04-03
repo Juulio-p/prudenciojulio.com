@@ -13,23 +13,30 @@
   "scripts": {
 
     "dev": "vite",
-    
-    "predeploy": "npm run build",
-    "deploy": "gh-pages -d dist",
 
+    "predeploy": "npm run build",
+
+    "deploy": "gh-pages -d dist",
 
     "build": "tsc -b && vite build",
 
     "lint": "eslint .",
 
     "preview": "vite preview"
+
   },
 
   "dependencies": {
 
+    "@mantine/core": "^7.17.3",
+
+    "@mantine/hooks": "^7.17.3",
+
     "react": "^19.0.0",
 
-    "react-dom": "^19.0.0"
+    "react-dom": "^19.0.0",
+
+    "react-icons": "^5.5.0"
 
   },
 
