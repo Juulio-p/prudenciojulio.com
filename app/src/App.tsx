@@ -1,4 +1,3 @@
-import { Container, Grid, Text, Button, Paper, Title } from '@mantine/core';
 
 import './App.css'
 
@@ -6,47 +5,77 @@ function App() {
 
   return (
     <>
-       <Container size="xl">
-      <header style={{ padding: '20px 0', textAlign: 'center' }}>
-        <Title order={1}>Julio C Prudencio</Title>
-        <Text color="dimmed">Junior AI Developer | Web Developer | Cybersecurity Enthusiast</Text>
-        <Button variant="light" color="blue" size="lg" style={{ marginTop: '20px' }}>
-          Contact Me
-        </Button>
+      <div className="App">
+      <header className="App-header">
+        <h1>Welcome to My Portfolio</h1>
+        <p>
+          Hi, I'm Julio C. Prudencio , a passionate developer with a focus on  Full stack web development, machine learning, and Cloud Technologies.
+        </p>
+        <a
+          className="App-link"
+          href="https://github.com/Juulio-p"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Visit my GitHub
+        </a>
       </header>
 
-      <section>
-        <Title order={2} style={{ marginTop: '40px' }}>About Me</Title>
-        <Text>
-          I am a passionate developer with experience in JavaScript, Python, React, and AI. I have worked on a variety of projects, from carpooling applications to cybersecurity research.
-        </Text>
-      </section>
+      
+      <section className="projects">
+        <h2>My Projects</h2>
+        <div className="project-list">
+          {/* Example project 1 */}
+          <div className="project-item card">
+            <h3>Project 1</h3>
+            <p> Project connected to amazon's dynamo db. Data is processed using boto3,
+		this is part of a this serverless framework that utilizes, aws technologies such as dynamodb, lambda, and api gateway. 
+		this serves to show knowledge of these technologies as well as basic concepts such as routing with python and flask. Also 
+		of course with basic knowledge of javascript, html, and css. Link to Project Repository Below. </p>
+            {/* Project Preview (Iframe to show live website) */}
+            <div className="project-preview">
+              <iframe
+                src="https://5q87zjb5yd.execute-api.us-east-1.amazonaws.com"  // Replace with your project URL
+                title="Project 1 Preview"
+                width="100%"
+                height="100%"
+              />
+            </div>
+            <a
+              href="https://5q87zjb5yd.execute-api.us-east-1.amazonaws.com"  // Replace with your live project URL
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View Project
+            </a>
+          </div>
 
-      <section>
-        <Title order={2} style={{ marginTop: '40px' }}>Skills</Title>
-        <Grid gutter="lg" style={{ marginTop: '20px' }}>
-          <Grid.Col span={4}>
-            <Paper  shadow="sm">
-              <Text >JavaScript</Text>
-              <Text color="dimmed">React, Node.js, Express</Text>
-            </Paper>
-          </Grid.Col>
-          <Grid.Col span={4}>
-            <Paper  shadow="sm">
-              <Text>Python</Text>
-              <Text color="dimmed">Flask, Django, Machine Learning</Text>
-            </Paper>
-          </Grid.Col>
-          <Grid.Col span={4}>
-            <Paper  shadow="sm">
-              <Text >Web Development</Text>
-              <Text color="dimmed">HTML, CSS, JavaScript, React</Text>
-            </Paper>
-          </Grid.Col>
-        </Grid>
+          {/* Example project 2 */}
+          <div className="project-item card">
+            <h3>Project 2</h3>
+            <p>Project I did for fun while learning reat basics </p>
+            {/* Project Preview (Iframe to show live website) */}
+            <div className="project-preview">
+              <iframe
+                src="https://juulio-p.github.io/Website/"  // Replace with your project URL
+                title="Project 2 Preview"
+                width="100%"
+                height="300px"
+                frameBorder="0"
+              />
+            </div>
+            <a
+              href="https://juulio-p.github.io/Website/"  // Replace with your live project URL
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View Project
+            </a>
+          </div>
+        </div>
       </section>
-
-    </Container>
+    </div>
+    
     </>
   )
 }
